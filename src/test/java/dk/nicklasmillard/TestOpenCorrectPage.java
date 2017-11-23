@@ -1,7 +1,7 @@
 package dk.nicklasmillard;
 
 /**
- * Text text
+ * Text text text
  */
 
 import org.openqa.selenium.By;
