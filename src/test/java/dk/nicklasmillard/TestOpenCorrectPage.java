@@ -2,7 +2,7 @@ package dk.nicklasmillard;
 
 /**
  * Text text text
- * git dev
+ * git dev3
  */
 
 import org.openqa.selenium.By;
@@ -14,10 +14,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestOpenCorrectPage {
-    String url = "https://www.google.dk/?gws_rd=ssl";
-    WebDriver driver;
+    private String url = "https://www.google.dk/?gws_rd=ssl";
+    private WebDriver driver;
 
-    public void testOpenCorrectPage() {
+    @Test(priority = 1)
+    private void testOpenCorrectPage() {
         // Set geckodriver
         System.setProperty("webdriver.gecko.driver", "C:\\users\\nmillard\\Desktop\\geckodriver.exe");
         // Instantiate new firefox driver
@@ -30,7 +31,8 @@ public class TestOpenCorrectPage {
         Assert.assertEquals(driver.getCurrentUrl(), url);
     }
 
-    public void testInputSearchQuery() {
+    @Test(dependsOnMethods = {"testOpenCorrectPage"})
+    private void testInputSearchQuery() {
         String searchQuery = "Search this...";
 
         // Find element on page
@@ -43,7 +45,8 @@ public class TestOpenCorrectPage {
         Assert.assertEquals(valueAfterInput, searchQuery);
     }
 
-    public void testClickButton() {
+    @Test(dependsOnMethods = {"testInputSearchQuery"})
+    private void testClickButton() {
         // Find element on page with name "btnK" <- the search button's name
         WebElement inputSearchButton = driver.findElement(By.name("btnK"));
         // Click the button
@@ -54,13 +57,4 @@ public class TestOpenCorrectPage {
         // Check if url has changed
         Assert.assertNotEquals(redirectedUrl, url);
     }
-
-    @Test
-    public void execute() {
-        testOpenCorrectPage();
-        testInputSearchQuery();
-        testClickButton();
-    }
-
-
 }
