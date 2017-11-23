@@ -16,6 +16,14 @@ public void testFunction() {
 }
 ```
 
+and even syntax highlighting
+
+```ruby
+public void testFunction() {
+    System.out.println("Test function");
+}
+```
+
 link to [something](https://google.dk)
 
 - [x] Checked
