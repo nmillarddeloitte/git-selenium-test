@@ -18,7 +18,7 @@ public void testFunction() {
 
 and even syntax highlighting
 
-```ruby
+```java
 public void testFunction() {
     System.out.println("Test function");
 }
