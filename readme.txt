@@ -1,3 +1,5 @@
 Read this
 
 Some more text
+
+#New lines in master
