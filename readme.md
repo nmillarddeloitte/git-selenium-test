@@ -6,6 +6,19 @@ Some more text
 
 # Dev
 
-Formatted `code`
+Formatted `code` inline
 
-link to [something] (https://www.google.dk)
+And code blocks 
+
+```
+public void testFunction() {
+    System.out.println("Test function");
+}
+```
+
+link to [something](https://google.dk)
+
+- [x] Checked
+- [ ] Unchecked
+
+@github/nmillarddeloitte mentioned here
