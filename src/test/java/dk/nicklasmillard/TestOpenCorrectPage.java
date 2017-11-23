@@ -2,7 +2,7 @@ package dk.nicklasmillard;
 
 /**
  * Text text text
- * git git
+ * git git git git
  */
 
 import org.openqa.selenium.By;
