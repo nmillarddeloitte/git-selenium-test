@@ -1,5 +1,9 @@
+# Ignore IDE specific files
 .idea/
 .idea/**
+
+# Ignore compiled code
+target/
 
 test-cases.iml
 testcases.iml
