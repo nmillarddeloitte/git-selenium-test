@@ -17,7 +17,7 @@ public class TestOpenCorrectPage {
     private String url = "https://www.google.dk/?gws_rd=ssl";
     private WebDriver driver;
 
-    //@Test(priority = 1)
+    @Test(priority = 1)
     private void testOpenCorrectPage() {
         // Set geckodriver
         System.setProperty("webdriver.gecko.driver", "C:\\users\\nmillard\\Desktop\\geckodriver.exe");
