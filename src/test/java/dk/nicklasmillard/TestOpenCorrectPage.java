@@ -17,7 +17,7 @@ public class TestOpenCorrectPage {
     private String url = "https://www.google.dk/?gws_rd=ssl";
     private WebDriver driver;
 
-    @Test(priority = 1)
+    //@Test(priority = 1)
     private void testOpenCorrectPage() {
         // Set geckodriver
         System.setProperty("webdriver.gecko.driver", "C:\\users\\nmillard\\Desktop\\geckodriver.exe");
@@ -31,7 +31,7 @@ public class TestOpenCorrectPage {
         Assert.assertEquals(driver.getCurrentUrl(), url);
     }
 
-    @Test(dependsOnMethods = {"testOpenCorrectPage"})
+    //@Test(dependsOnMethods = {"testOpenCorrectPage"})
     private void testInputSearchQuery() {
         String searchQuery = "Search this...";
 
@@ -45,7 +45,7 @@ public class TestOpenCorrectPage {
         Assert.assertEquals(valueAfterInput, searchQuery);
     }
 
-    @Test(dependsOnMethods = {"testInputSearchQuery"})
+    //@Test(dependsOnMethods = {"testInputSearchQuery"})
     private void testClickButton() {
         // Find element on page with name "btnK" <- the search button's name
         WebElement inputSearchButton = driver.findElement(By.name("btnK"));
