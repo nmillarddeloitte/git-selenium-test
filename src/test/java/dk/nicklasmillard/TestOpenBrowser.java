@@ -7,7 +7,7 @@ import org.testng.Assert;
 
 public class TestOpenBrowser {
 
-    //@Test
+    @Test
     public void TestOpenBrowser() {
         // Set geckodriver
         System.setProperty("webdriver.gecko.driver", "C:\\users\\nmillard\\Desktop\\geckodriver.exe");
